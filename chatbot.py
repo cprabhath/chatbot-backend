@@ -10,6 +10,7 @@ import nltk
 from tensorflow.keras.models import load_model
 from nltk.stem import WordNetLemmatizer
 from flask_cors import CORS
+from flask_cors import cross_origin
 import re
 #-----------------------------------------------------------------------#
 
@@ -117,6 +118,7 @@ def get_response(intents_list, intents_json, context):
 
 #---------------------API endpoint for getting the response-------------#
 @app.route('/get', methods=['POST'])
+@cross_origin()
 def get_bot_response():
     user_text = request.get_json().get('message')
     context = {}
