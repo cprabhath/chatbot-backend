@@ -76,7 +76,7 @@ def extract_activity_type(user_input):
 def extract_accommodation_list(user_input):
     match = re.search(r'\b(cheap|luxury|expensive)\b', user_input, re.IGNORECASE)
     return match.group(1).lower() if match else None
-#-----------------------------------------------------------------------#
+#------------------------------------------------------------------------#
 
 #----------------Updating the context with the extracted information-----#
 def update_context(user_input, context):
