@@ -1,5 +1,5 @@
 To initialize the chatbot plese follow below steps:
-if chatbot_model.keras files exists in the directory, you can directly execute STEP 04.
+if chatbot_model.keras files exists in the directory, no need execute STEP 03.
 
     STEP 01:
         Create env folder in your directry and activate it. to create that folder please run below command:
