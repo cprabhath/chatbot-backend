@@ -1,0 +1,316 @@
+{
+      "intents": [
+        {
+          "tag": "greeting",
+          "patterns": ["Hello", "Hi", "Hey", "Greetings", "Good day", "What's up", "Howdy", "Yo", "Hi there", "Hello there", "Hey there", "Hi!", "Hello!", "Hey!"],
+          "responses": [
+            "Hello! Welcome, I am your personal travel assistant. How can I assist you today? 😊",
+            "Hi there! How can I help you with your travel plans? 🫠",
+            "Hey! It's great to see you. What can I do for you today? 🛫",
+            "Greetings! I'm here to help with your travel needs. What would you like to know? 🤗",
+            "Hello! I'm your travel assistant. How can I make your travel experience better? ✈️",
+            "Hi! I'm here to assist you with your travel plans. What can I do for you today? 😉",
+            "Hey there! I'm your personal travel assistant. How can I make your trip amazing? 😎"
+          ]
+        },
+        {
+          "tag": "destination_recommendation",
+          "patterns": ["Recommend a destination", "Where should I go?", "Suggest a travel destination", "Help me choose a vacation spot", "Find me a destination", "I need a vacation spot", "I want to travel somewhere"],
+          "responses": [
+            "Sure! I can help you find the perfect destination. What type of vacation are you looking for? 🌍",
+            "Certainly! What kind of travel experience are you interested in? Let's find your dream destination. 🌴",
+            "Great choice! Let's start by exploring some travel destinations. What are your preferences? 🗺️",
+            "Absolutely! To recommend the ideal destination, could you share your interests or the type of trip you're looking for? 🏖️",
+            "Of course! I'd love to suggest a destination. What kind of travel experience are you seeking? 🌄",
+            "No problem! To recommend a destination, please tell me your interests or the type of vacation you're planning. 🏝️",
+            "I'd be happy to help! What kind of destination are you in the mood for? Let's find the perfect spot for you. 🌅"
+          ]
+        },
+        {
+          "tag": "destination_preferences",
+          "patterns": ["I like beaches", "Adventure trip", "Cultural experience", "Surprise me", "I enjoy nature", "City exploration", "Historical sites", "Food and wine", "Family-friendly", "Romantic getaway", "Off the beaten path", "Luxury travel", "Budget-friendly", "Solo travel", "Group trip"],
+          "responses": [
+            "Excellent! Your interests sound exciting. To narrow it down, when are you planning to travel and where are you considering? 🏞️",
+            "Sounds like you're open to adventure! To help you decide, could you share your travel dates and any region preferences? 🌇",
+            "Great! I'll surprise you with some amazing destinations. Just let me know your travel dates and any specific regions you're interested in. 🌊",
+            "Wonderful choices! To find the perfect destination, please share your travel dates and any preferred regions or countries. 🏰",
+            "Fantastic! I'll find you a destination that matches your interests. When are you traveling, and do you have any specific regions in mind? 🍷",
+            "Exciting choices! To recommend a destination, please provide your travel dates and any regions you're considering. Let's find your dream spot! 🏖️"
+          ]
+        },
+        {
+          "tag": "book_flight",
+          "patterns": ["Book a flight", "Flights", "I need to fly somewhere", "Airline tickets", "Flight booking", "Find me a flight", "I want to travel by plane"],
+          "responses": [
+            "Excellent choice! Let's start by providing your departure and arrival cities and travel dates.",
+            "Great decision! To get you on your way, please tell me your departure and arrival cities and your preferred travel dates. ✈️",
+            "Sure thing! To book your flight, I'll need to know your departure and arrival cities, as well as your travel dates. 🛩️",
+            "Absolutely! I can help you book a flight. Please specify your departure and arrival cities and the dates you plan to travel. 🌐",
+            "Of course! To book your flight, please provide your departure and arrival cities and the dates you wish to travel. Let's get you flying! 🌍",
+            "No problem! Let's get you a flight. Just tell me your departure and arrival cities and the dates you're looking to travel. ✈️",
+            "I'd be happy to help you book a flight. Please share your departure and arrival cities and the dates you're planning to travel. 🛫"
+          ]
+        },
+        {
+          "tag": "flight_details",
+          "patterns": ["I'm flying from [departure_city] to [arrival_city] on [travel_date]", "From [departure_city] to [arrival_city] on [travel_date]", "Departure: [departure_city], Arrival: [arrival_city], Date: [travel_date]"],
+          "responses": [
+            "Thank you for providing your flight details. Now, let's find suitable accommodations. What are your check-in and check-out dates for your stay? 🏨",
+            "Got it! Your flight details are noted. Let's move on to booking your accommodations. When will you be checking in and out? 🏠",
+            "Perfect! Your flight details are confirmed. Next, please specify your check-in and check-out dates for accommodations. 🏩",
+            "Noted! Your flight details are set. What type of lodging are you interested in? (e.g., hotel, resort, Airbnb) 🏢",
+            "Great! Your flight details are confirmed. What type of lodging would you prefer? (e.g., hotel, resort, Airbnb) 🏪",
+            "Understood! Your flight details are noted. What kind of lodging are you looking for? (e.g., hotel, resort, Airbnb) 🏦",
+            "Excellent! Your flight details are confirmed. What type of lodging are you interested in? (e.g., hotel, resort, Airbnb) 🏬"
+          ]
+        },
+        {
+          "tag": "book_accommodation",
+          "patterns": ["Book accommodation", "Hotels", "Where should I stay?", "Find me a place to stay", "Accommodation booking", "I need a place to stay", "Reserve a room", "Lodging options"],
+          "responses": [
+            "Of course! I can assist you in finding suitable accommodations. Please specify your check-in and check-out dates. 🏨",
+            "Certainly! Let's explore lodging options. When do you plan to check in and check out? 🏠",
+            "Absolutely! To find you the perfect place to stay, could you provide your check-in and check-out dates? 🏩",
+            "Great choice! Let's start by setting your accommodation dates. When will you be checking in and out? 🏢",
+            "No problem! To book your accommodations, please share your check-in and check-out dates. Let's find you a great place to stay! 🏪",
+            "I'd be happy to help you find accommodations. When are you planning to check in and check out? 🏦",
+            "Exciting! Let's find you a place to stay. Please provide your check-in and check-out dates. 🏬"
+          ]
+        },
+        {
+          "tag": "accommodation_dates",
+          "patterns": ["I'll be arriving on [check_in_date] and departing on [check_out_date]", "Check-in on [check_in_date] and check-out on [check_out_date]", "Arrival: [check_in_date], Departure: [check_out_date]"],
+          "responses": [
+            "Thank you for providing your accommodation dates. What type of lodging are you interested in? (e.g., hotel, resort, Airbnb) 🏨",
+            "Great! Your accommodation dates are set. What type of lodging would you prefer? (e.g., hotel, resort, Airbnb) 🏠",
+            "Noted! Your check-in and check-out dates are confirmed. What kind of lodging are you looking for? (e.g., hotel, resort, Airbnb) 🏩",
+            "Understood! Your accommodation dates are noted. What type of lodging are you interested in? (e.g., hotel, resort, Airbnb) 🏢",
+            "Excellent! Your check-in and check-out dates are confirmed. What type of lodging are you interested in? (e.g., hotel, resort, Airbnb) 🏪",
+            "Got it! Your accommodation dates are confirmed. What type of lodging are you interested in? (e.g., hotel, resort, Airbnb) 🏦",
+            "Perfect! Your check-in and check-out dates are set. What type of lodging are you interested in? (e.g., hotel, resort, Airbnb) 🏬"
+          ]
+        },
+        {
+          "tag": "accommodation_preferences",
+          "patterns": ["I prefer a [lodging_type] accommodation", "Any specific lodging preferences?", "I like [lodging_type]", "I'm open to various options", "I have specific requirements", "I have certain preferences", "I have some requests"],
+          "responses": [
+            "Understood! Do you have any specific preferences for your chosen [lodging_type], or should I suggest a variety of options? 🏨",
+            "Great choice! Preferences make a difference. Do you have any specific requests for your [lodging_type], or should I provide a mix of options? 🏠",
+            "Noted! Preferences are important. Is there anything specific you'd like in your [lodging_type], or should I offer a range of choices? 🏩",
+            "Got it! Preferences matter. Are there any specific features you're looking for in your [lodging_type], or should I present a selection of options? 🏢",
+            "Absolutely! Preferences are key. Do you have any specific requirements for your chosen [lodging_type], or should I offer a selection of options? 🏪",
+            "Of course! Preferences are important. Are there any specific amenities you'd like in your [lodging_type], or should I provide a variety of options? 🏦"
+          ]
+        },
+        {
+          "tag": "accommodation_budget",
+          "patterns": ["My budget is around $[budget_amount] per night", "Budget: $[budget_amount]", "I'm flexible with the budget", "I have a fixed budget", "Around $[budget_amount] per night", "Budget-friendly options"],
+          "responses": [
+            "Thank you for specifying your budget. I'll now search for accommodations that match your criteria. Please wait a moment.",
+            "Got it! I'll search for [budget_amount]-per-night accommodations within your preferences. This won't take long. Please hold on.",
+            "Noted! Your budget is set. I'll find you some great options within that range. Just a moment, please.",
+            "Understood! I'll look for accommodations around $[budget_amount] per night that meet your preferences. Please wait a moment.",
+            "Great! I'll search for accommodations within your budget of $[budget_amount] per night. This should only take a moment. Please be patient.",
+            "Perfect! I'll find you some great options around $[budget_amount] per night. This won't take long. Please hold on."
+          ]
+        },
+        {
+          "tag": "accommodation_suggestions",
+          "patterns": ["Show me the options", "What accommodations do you recommend?", "Find me some places to stay", "Suggest lodging options", "Show me the list", "Recommendations please", "I'd like to see the choices"],
+          "responses": [
+            "Certainly! I'll provide you with a list of lodging options that match your preferences 😉",
+            "Of course! I'll recommend some great accommodations based on your preferences 🏨",
+            "Absolutely! I'll find you some fantastic places to stay that meet your criteria 🏠",
+            "Great choice! I'll suggest some top-notch accommodations that align with your preferences 🏩",
+            "No problem! I'll show you some excellent lodging options that suit your requirements 🏢",
+            "I'd be happy to help! I'll find you some wonderful places to stay based on your preferences 🏪"
+          ]
+        },
+        {
+          "tag": "activity_recommendation",
+          "patterns": ["What activities are there?", "Suggest things to do", "Activities at my destination", "Find me some activities", "I need activity recommendations", "What can I do there?", "I want to explore activities"],
+          "responses": [
+            "Of course! To provide you with the best recommendations, could you please tell me your interests or the type of activities you enjoy? 🏞️",
+            "Certainly! I'd love to suggest some activities. What are your interests, or what type of activities do you have in mind? 🏖️",
+            "Absolutely! Let's plan some activities. What are your interests or the type of activities you prefer? 🏰",
+            "Great choice! To recommend activities, could you share your interests or the type of activities you're looking for? 🏝️",
+            "No problem! I can suggest some great activities. What are your interests or the type of activities you enjoy? 🏜️",
+            "I'd be happy to help! What kind of activities are you interested in? Let's plan some fun things to do. 🏟️",
+            "Exciting! What activities are you in the mood for? Let's find some great options for you. 🏛️"
+          ]
+        },
+        {
+          "tag": "activity_preferences",
+          "patterns": ["I enjoy [activity_type]", "I'd like to go [activity_type]", "Surprise me", "I'm open to various activities", "I have specific preferences", "I have certain interests", "I have some requests", "I have a few ideas"],
+          "responses": [
+            "That's wonderful! [activity_type] activities can be very exciting. Where would you like to explore these activities? 🏞️",
+            "Excellent choice! [activity_type] is fantastic. Where would you like to experience these activities? 🏖️",
+            "Great! [activity_type] it is. Where shall we plan these exciting activities? 🏰",
+            "Sounds like fun! [activity_type] activities are great. Where would you like to enjoy these activities? 🏝️",
+            "Wonderful choice! [activity_type] activities are fantastic. Where would you like to experience these activities? 🏜️",
+            "Fantastic! [activity_type] activities are a great choice. Where would you like to explore these activities? 🏟️",
+            "Exciting! [activity_type] activities are a fantastic option. Where would you like to enjoy these activities? 🏛️"
+          ]
+        },
+        {
+          "tag": "restaurant_recommendation",
+          "patterns": ["Recommend restaurants", "Where to eat", "Find me a restaurant", "Suggest dining options", "I need restaurant recommendations", "What are the best restaurants?", "I want to dine out", "Restaurants nearby", "Food recommendations"],
+          "responses": [
+            "Absolutely! To suggest the perfect restaurant, could you let me know your cuisine preferences or dietary restrictions? 🍽️",
+            "Certainly! I can recommend some great restaurants. Do you have any cuisine preferences or dietary restrictions? 🍴",
+            "Of course! Let's find you a fantastic restaurant. Any specific cuisine preferences or dietary requirements? 🥂",
+            "Great choice! I'd love to recommend a restaurant. What type of cuisine are you in the mood for, or do you have any dietary restrictions? 🍷",
+            "No problem! I can suggest some top-notch restaurants. What type of cuisine do you prefer, or do you have any dietary restrictions? 🍹",
+            "I'd be happy to help! What kind of cuisine are you craving, or do you have any dietary restrictions for restaurant recommendations? 🍸",
+            "Exciting! Let's find you a great restaurant. What type of cuisine are you interested in, or do you have any dietary restrictions? 🍾"
+          ]
+        },
+        {
+          "tag": "restaurant_preferences",
+          "patterns": ["I prefer [cuisine_type] cuisine", "I'm open to various cuisines", "I have dietary restrictions", "I'm a vegetarian", "I'm vegan", "I have food allergies", "I'm gluten-free", "I'm lactose intolerant", "I'm pescatarian", "I'm on a diet", "I'm a foodie", "I enjoy trying new foods"],
+          "responses": [
+            "Thank you for sharing your preferences. I'll find some great restaurant options for you. Anything specific you're craving? ",
+            "Noted! [cuisine_type] cuisine it is. I'll suggest some delicious options. Any specific dishes you're in the mood for?",
+            "Great! [cuisine_type] cuisine is on the menu. I'll find some top-notch restaurants for you. Any dietary restrictions I should be aware of?",
+            "Understood! I'll look for [cuisine_type] cuisine options. Any specific dishes you're interested in, or any dietary restrictions I should know about?",
+            "Perfect! I'll find you some [cuisine_type] cuisine options. Any specific dishes you're craving, or any dietary restrictions I should consider?",
+            "Got it! [cuisine_type] cuisine it is. I'll find some great restaurants for you. Any specific dishes you're looking forward to?"
+          ]
+        },
+        {
+          "tag": "goodbye",
+          "patterns": ["Goodbye", "See you later", "Bye", "Farewell", "Take care", "Have a nice day", "Until next time", "Adios", "Catch you later", "Later", "See you soon", "Have a great trip"],
+          "responses": [
+            "Goodbye! If you have any more questions or need assistance in the future, feel free to return. Have a fantastic trip! 🌟",
+            "See you later! Safe travels, and don't hesitate to reach out if you need help in the future. Have a wonderful journey! 🌍",
+            "Bye for now! Have an amazing trip, and remember, I'm here whenever you need travel assistance. Enjoy your travels! 🌴",
+            "Farewell! If you have any more questions or need assistance later on, don't hesitate to ask. Have a wonderful journey! 🌞",
+            "Take care! If you need help or have any questions in the future, feel free to come back. Have a great trip! 🌺",
+            "Goodbye! I'm here to help whenever you need assistance. Have a fantastic journey and enjoy your travels! 🌈",
+            "See you later! If you have any more questions or need assistance, don't hesitate to return. Safe travels! 🌠"
+          ]
+        },{
+          "tag": "thanks",
+          "patterns": ["Thanks", "Thank you", "Appreciate it", "Thanks a lot", "Thank you so much", "Thank you very much", "Thanks for your help", "Thanks for assisting me", "I appreciate your help", "I'm grateful", "Thanks for the support", "Thanks for everything"],
+          "responses": [
+            "You're welcome! If you have any more questions or need assistance, feel free to ask. Have a great day! 🌟",
+            "You're welcome! I'm here to help. If you need anything else, just let me know. Safe travels! 🌍",
+            "No problem! If you have any more questions or need assistance, don't hesitate to ask. Have a wonderful trip! 🌴",
+            "You're welcome! If you need help or have any questions in the future, feel free to reach out. Have a fantastic journey! 🌞",
+            "You're welcome! I'm glad I could assist you. If you have any more questions or need help, feel free to ask. Safe travels! 🌺",
+            "You're welcome! I'm here to help. If you have any more questions or need assistance, just let me know. Have a great day! 🌈",
+            "You're welcome! If you have any more questions or need assistance, feel free to ask. Have a great day! 🌠"
+          ]
+        },
+        {
+          "tag": "help",
+          "patterns": ["Help", "Can you help me?", "I need assistance", "I have a question", "Can you assist me?", "I'm stuck", "I need help with something", "Can you guide me?", "I'm confused", "Can you provide support?"],
+          "responses": [
+            "Of course! I'm here to help. What do you need assistance with? 🤗",
+            "Absolutely! I'm here to assist you. What can I help you with today? 🫠",
+            "Sure thing! I'm here to help. What do you need assistance with? 🤔",
+            "No problem! I'm here to assist you. What can I help you with today? 😊",
+            "I'd be happy to help! What do you need assistance with? 😊",
+            "I'm here to help. What can I assist you with today? 😊",
+            "I'm here to help. What do you need assistance with? 😊"
+          ]
+        },
+        {
+          "tag": "fallback",
+          "patterns": ["", "I don't understand", "Can you repeat that?", "Please say that again", "I'm not sure what you mean", "What was that?", "I didn't catch that", "Can you rephrase that?", "I'm confused", "Say that again?", "I'm lost", "I don't get it"],
+          "responses": [
+            "I'm sorry, I didn't catch that. Could you please repeat or rephrase your request? 🤔",
+            "I'm sorry, I didn't understand that. Can you provide more details or rephrase your question? 🤔",
+            "I'm sorry, I'm not sure what you're asking. Could you please clarify or ask in a different way? 🤔",
+            "I'm sorry, I didn't get that. Can you repeat or rephrase your question for me? 🤔",
+            "I'm sorry, I didn't quite catch that. Could you please repeat or rephrase your request? 🤔",
+            "I'm sorry, I didn't understand that. Can you provide more details or ask in a different way? 🤔"
+          ]
+        },
+        {
+          "tag": "no_response",
+          "patterns": ["", "No", "No thanks", "I'm good", "Nothing", "Not really", "Not interested", "I'm okay", "I'm fine", "Nope", "Nah"],
+          "responses": [
+            "No problem! If you have any more questions or need assistance, feel free to ask. Have a great day! 🌟",
+            "Alright! If you need help or have any questions in the future, don't hesitate to reach out. Safe travels! 🌍",
+            "Understood! If you change your mind or need assistance later, feel free to ask. Have a wonderful trip! 🌴",
+            "Got it! If you have any other questions or need assistance, feel free to ask. Have a great day! 🌞",
+            "No problem! If you need help or have any questions in the future, don't hesitate to reach out. Safe travels! 🌺",
+            "Understood! If you change your mind or need assistance later, feel free to ask. Have a wonderful trip! 🌈"
+          ]
+        },
+        {
+          "tag": "cancel",
+          "patterns": ["Cancel", "Never mind", "Forget it", "I changed my mind", "Don't worry about it", "I don't need it anymore", "I'll pass", "I'll skip it", "No need", "I'll handle it myself", "I'll figure it out", "I'll manage", "I'll take care of it"],
+          "responses": [
+            "Got it! If you have any other questions or need assistance, feel free to ask. Have a great day! 🌟",
+            "No problem! If you need help or have any questions in the future, don't hesitate to reach out. Safe travels! 🌍",
+            "Understood! If you change your mind or need assistance later, feel free to ask. Have a wonderful trip! 🌴",
+            "Alright! If you have any more questions or need assistance, feel free to ask. Have a great day! 🌞",
+            "Sure thing! If you need help or have any questions in the future, don't hesitate to reach out. Safe travels! 🌺",
+            "I understand! If you change your mind or need assistance later, feel free to ask. Have a wonderful trip! 🌈"
+          ]
+        },
+        {
+          "tag": "unknown",
+          "patterns": ["", "I don't know", "I'm not sure", "Maybe", "I'm uncertain", "I'm confused", "I'm lost", "I'm stuck", "I'm not certain", "I'm clueless", "I have no idea", "I'm at a loss"],
+          "responses": [
+            "That's okay! If you have any other questions or need assistance, feel free to ask. Have a great day! 🌟",
+            "No problem! If you need help or have any questions in the future, don't hesitate to reach out. Safe travels! 🌍",
+            "Understood! If you change your mind or need assistance later, feel free to ask. Have a wonderful trip! 🌴",
+            "Got it! If you have any more questions or need assistance, feel free to ask. Have a great day! 🌞",
+            "No problem! If you need help or have any questions in the future, don't hesitate to reach out. Safe travels! 🌺",
+            "Understood! If you change your mind or need assistance later, feel free to ask. Have a wonderful trip! 🌈"
+          ]
+        },
+        {
+          "tag": "error",
+          "patterns": ["", "Error", "Issue", "Problem", "Bug", "Glitch", "Mistake", "Fault", "Trouble", "Failure", "Mishap", "Defect", "Error message", "Technical difficulty", "Something went wrong"],
+          "responses": [
+            "I'm sorry to hear that. Please provide more details about the error or issue you're experiencing so I can assist you better. 🛠️",
+            "I apologize for the inconvenience. Could you describe the problem or error you encountered so I can help you resolve it? 🧰",
+            "I'm here to help. To address the problem or error, please explain the issue you're facing so I can assist you effectively. 🔧",
+            "I'm sorry to hear that. Please provide more details about the error or issue you're experiencing so I can assist you better. 🛠️",
+            "I apologize for the inconvenience. Could you describe the problem or error you encountered so I can help you resolve it? 🧰",
+            "I'm here to help. To address the problem or error, please explain the issue you're facing so I can assist you effectively. 🔧"
+          ]
+        },
+        {
+          "tag": "contact_support",
+          "patterns": ["Contact support", "Help from a human", "Speak to a representative", "Get me a customer service agent", "I need assistance from a person", "Connect me to a support agent", "I want to talk to someone", "I need human help", "I want to speak to a human", "I need a real person", "I need a live agent", "I need to contact customer service"],
+          "responses": [
+            "I understand. Please hold on while I connect you to a customer support representative for further assistance. 📞"
+          ]
+        },
+        {
+          "tag": "positive_feedback",
+          "patterns": ["Great job", "Well done", "Awesome", "Excellent", "Amazing", "Impressive", "Fantastic", "Superb", "Brilliant", "Good work", "You're the best", "You're awesome", "You're amazing", "You're fantastic", "You're great"],
+          "responses": [
+            "Thank you! I'm glad I could assist you. If you have any more questions or need help, feel free to ask. Safe travels! 😊",
+            "I appreciate the positive feedback! If you need assistance in the future, don't hesitate to reach out. Safe travels! 🌍",
+            "Thank you for the kind words! I'm here to help. If you have any more questions or need assistance, just let me know. Have a wonderful trip! 🌴"
+          ]
+        },
+        {
+          "tag": "negative_feedback",
+          "patterns": ["Not helpful", "Didn't work", "Disappointing", "Unsatisfactory", "Poor service", "Bad experience", "Frustrating", "Terrible", "Awful", "Horrible", "Worst", "Not good", "I'm not satisfied", "I'm disappointed", "I'm frustrated"],
+          "responses": [
+            "I'm sorry to hear that. Please provide more details about what didn't work so I can improve and assist you better. 🙁",
+            "I apologize for the inconvenience. Could you describe the issue you encountered so I can address it and assist you effectively? 🙁",
+            "I'm here to help. To address the problem, please explain what didn't work so I can assist you and improve the experience. 🙁"
+          ]
+        },
+        {
+          "tag": "introdution",
+          "patterns": ["Who are you?", "What can you do?", "What is your purpose?", "What are you?", "What do you do?", "What is your role?", "What is your function?", "What is your job?", "What is your mission?", "What is your goal?"],
+          "responses": [
+            "I am a Chatbot designed to assist you with your travel plans. I can help you with booking flights, accommodations, recommending destinations, and more. How can I help you today? 😊",
+            "I'm a Chatbot here to help you with your travel needs. I can assist you with booking flights, accommodations, suggesting destinations, and planning activities. What can I do for you? 🫠",
+            "I'm a Chatbot created to make your travel experience better. I can help you with booking flights, accommodations, recommending destinations, and planning activities. How can I assist you today? 🛫",
+            "I'm a Chatbot designed to assist you with your travel plans. I can help you with booking flights, accommodations, suggesting destinations, and planning activities. What would you like to know? 🤗",
+            "I'm a Chatbot here to help you with your travel needs. I can assist you with booking flights, accommodations, suggesting destinations, and planning activities. How can I make your trip amazing? ✈️"
+          ]
+        }
+      ]
+    }
+    
