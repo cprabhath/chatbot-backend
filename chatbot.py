@@ -16,12 +16,10 @@ import re
 
 #----------------------Initializing the Flask app-----------------------#
 app = Flask(__name__)
-app.config['CORS_HEADERS'] = 'Content-Type'
-app.config['CORS_RESOURCES'] = {r"/*": {"origins": "*"}}
 #-----------------------------------------------------------------------#
 
 #---------------------------Enabling CORS-------------------------------#
-CORS(app, resources={r"/*": {"origins": "*"}})
+CORS(app)
 #-----------------------------------------------------------------------#
 
 #----------------------Loading the required files-----------------------#
@@ -120,7 +118,7 @@ def get_response(intents_list, intents_json, context):
 
 #---------------------API endpoint for getting the response-------------#
 @app.route('/get', methods=['POST'])
-@cross_origin()
+@cross_origin(origin='*', headers=['Content-Type', 'Authorization'])
 def get_bot_response():
     user_text = request.get_json().get('message')
     context = {}
