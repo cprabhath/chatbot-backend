@@ -88,12 +88,7 @@
         "Luxury travel",
         "Budget-friendly",
         "Solo travel",
-        "Group trip",
-        "Heya",
-        "Hello again",
-        "Hi again",
-        "Welcome back",
-        "How's it going"
+        "Group trip"
       ],
       "responses": [
         "Excellent! Your interests sound exciting. To narrow it down, when are you planning to travel and where are you considering? 🏞️",
@@ -101,7 +96,8 @@
         "Great! I'll surprise you with some amazing destinations. Just let me know your travel dates and any specific regions you're interested in. 🌊",
         "Wonderful choices! To find the perfect destination, please share your travel dates and any preferred regions or countries. 🏰",
         "Fantastic! I'll find you a destination that matches your interests. When are you traveling, and do you have any specific regions in mind? 🍷",
-        "Exciting choices! To recommend a destination, please provide your travel dates and any regions you're considering. Let's find your dream spot! 🏖️"
+        "Exciting choices! To recommend a destination, please provide your travel dates and any regions you're considering. Let's find your dream spot! 🏖️",
+        "Understood! Your preferences are noted. To suggest a destination, please share your travel dates and any specific regions you're interested in. 🏝️"
       ]
     },
     {
