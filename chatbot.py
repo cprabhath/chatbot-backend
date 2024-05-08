@@ -1,41 +1,43 @@
 # Description: This file contains the code of access trained AI model and accessed through the flask API.
 
-#-------------Importing the required libraries and modules--------------#
+# -------------Importing the required libraries and modules-------------- #
 from flask import Flask, request, jsonify
 import random
 import json
 import pickle
 import numpy as np
 import nltk
-from tensorflow.keras.models import load_model
+import tensorflow as tf
 from nltk.stem import WordNetLemmatizer
 from flask_cors import CORS
 import re
-#-----------------------------------------------------------------------#
+# ----------------------------------------------------------------------- #
 
-#----------------------Initializing the Flask app-----------------------#
+# ----------------------Initializing the Flask app----------------------- #
 app = Flask(__name__)
-#-----------------------------------------------------------------------#
+# ----------------------------------------------------------------------- #
 
-#---------------------------Enabling CORS-------------------------------#
+# ---------------------------Enabling CORS------------------------------- #
 CORS(app)
-#-----------------------------------------------------------------------#
+# ----------------------------------------------------------------------- #
 
-#----------------------Loading the required files-----------------------#
+# ----------------------Loading the required files----------------------- #
 lemmatizer = WordNetLemmatizer()
 intents = json.load(open('Intents.json', 'r', encoding='utf-8'))
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
-model = load_model('chatbot_model.keras')
-#-----------------------------------------------------------------------#
+model = tf.keras.models.load_model('chatbot_model.keras')
+# ----------------------------------------------------------------------- #
 
-#----------------------Cleaning up the sentence-------------------------#
+
+# ----------------------Cleaning up the sentence------------------------- #
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence.lower())
     return [lemmatizer.lemmatize(word) for word in sentence_words]
-#-----------------------------------------------------------------------#
+# ----------------------------------------------------------------------- #
 
-#----------------------Creating the bag of words------------------------#
+
+# ----------------------Creating the bag of words------------------------ #
 def bag_of_words(sentence):
     sentence_words = clean_up_sentence(sentence)
     bag = [0] * len(words)
@@ -44,9 +46,10 @@ def bag_of_words(sentence):
             if word == s:
                 bag[i] = 1
     return np.array(bag)
-#-----------------------------------------------------------------------#
+# ----------------------------------------------------------------------- #
 
-#----------------------Predicting the class of the sentence-------------#
+
+# ----------------------Predicting the class of the sentence------------- #
 def predict_class(sentence):
     bow = bag_of_words(sentence)
     res = model.predict(np.array([bow]))[0]
@@ -54,31 +57,37 @@ def predict_class(sentence):
     results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
     results.sort(key=lambda x: x[1], reverse=True)
     return [{'intent': classes[r[0]], 'probability': str(r[1])} for r in results]
-#-----------------------------------------------------------------------#
+# ----------------------------------------------------------------------- #
 
-#--------Extracting the required information from the user input--------#
+
+# --------Extracting the required information from the user input-------- #
 def extract_lodging_type(user_input):
     match = re.search(r'\b(hotel|hostel|resort)\b', user_input, re.IGNORECASE)
     return match.group(1).lower() if match else None
+
 
 def extract_budget_amount(user_input):
     match = re.search(r'\b(\d+)\b', user_input)
     return match.group(1) if match else None
 
+
 def extract_cuisine_type(user_input):
     match = re.search(r'\b(italian|chinese|indian|srilankan)\b', user_input, re.IGNORECASE)
     return match.group(1).lower() if match else None
+
 
 def extract_activity_type(user_input):
     match = re.search(r'\b(beach|sightseeing|shopping|nightlife)\b', user_input, re.IGNORECASE)
     return match.group(1).lower() if match else None
 
+
 def extract_accommodation_list(user_input):
     match = re.search(r'\b(cheap|luxury|expensive)\b', user_input, re.IGNORECASE)
     return match.group(1).lower() if match else None
-#------------------------------------------------------------------------#
+# ------------------------------------------------------------------------ #
 
-#----------------Updating the context with the extracted information-----#
+
+# ----------------Updating the context with the extracted information----- #
 def update_context(user_input, context):
     lodging_type = extract_lodging_type(user_input)
     if lodging_type:
@@ -92,17 +101,19 @@ def update_context(user_input, context):
     activity_type = extract_activity_type(user_input)
     if activity_type:
         context['activity_type'] = activity_type
-#-----------------------------------------------------------------------#
+# ----------------------------------------------------------------------- #
 
-#----------------Filling the placeholders with the context values-------#
+
+# ----------------Filling the placeholders with the context values------- #
 def fill_placeholders(response, context):
-    placeholders = re.findall(r'\[(\w+)\]', response)
+    placeholders = re.findall(r'\[(\w+)]', response)
     for placeholder in placeholders:
         response = response.replace(f'[{placeholder}]', context.get(placeholder, 'N/A'))
     return response
-#-----------------------------------------------------------------------#
+# ----------------------------------------------------------------------- #
 
-#----------------Getting the response from the chatbot------------------#
+
+# ----------------Getting the response from the chatbot------------------ #
 def get_response(intents_list, intents_json, context):
     if not intents_list:
         return "I'm not sure how to respond to that. Could you rephrase it or ask something else?"
@@ -113,9 +124,10 @@ def get_response(intents_list, intents_json, context):
             response = random.choice(i['responses'])
             return fill_placeholders(response, context)
     return "Sorry, I can't find an appropriate response."
-#-----------------------------------------------------------------------#
+# ----------------------------------------------------------------------- #
 
-#---------------------API endpoint for getting the response-------------#
+
+# ---------------------API endpoint for getting the response------------- #
 @app.route('/get', methods=['POST'])
 def get_bot_response():
     user_text = request.get_json().get('message')
@@ -124,9 +136,10 @@ def get_bot_response():
     ints = predict_class(user_text)
     response = get_response(ints, intents, context)
     return jsonify({"response": response})
-#-----------------------------------------------------------------------#
+# ----------------------------------------------------------------------- #
 
-#----------------------Running the Flask app----------------------------#
+
+# ----------------------Running the Flask app---------------------------- #
 if __name__ == "__main__":
     app.run(debug=True)
-#-----------------------------------------------------------------------#
+# ----------------------------------------------------------------------- #

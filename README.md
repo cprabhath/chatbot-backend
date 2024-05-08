@@ -1,4 +1,4 @@
-To initialize the chatbot plese follow below steps:
+To initialize the chatbot Please follow below steps:
 if chatbot_model.keras files exists in the directory, no need execute STEP 03.
 
     STEP 01:
