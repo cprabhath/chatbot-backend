@@ -116,14 +116,13 @@ def fill_placeholders(response, context):
 # ----------------Getting the response from the chatbot------------------ #
 def get_response(intents_list, intents_json, context):
     if not intents_list:
-        return "I'm not sure how to respond to that. Could you rephrase it or ask something else?"
+        return "I'm not sure how to respond to that. Could you rephrase it or ask something else? 🤔"
     tag = intents_list[0]['intent']
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
         if i['tag'] == tag:
             response = random.choice(i['responses'])
             return fill_placeholders(response, context)
-    return "Sorry, I can't find an appropriate response."
 # ----------------------------------------------------------------------- #
 
 

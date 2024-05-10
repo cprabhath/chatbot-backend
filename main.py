@@ -12,8 +12,6 @@ import tensorflow as tf
 import nltk
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
-from sklearn.metrics import accuracy_score
-
 # ----------------------------------------------------------------------- #
 
 # -------------Downloading the required files from NLTK------------------ #
@@ -89,7 +87,8 @@ train_y = training[:, len(words):]
 
 # ---------------------Creating the model architecture------------------- #
 model = tf.keras.Sequential([
-    tf.keras.layers.Dense(128, input_shape=(len(train_x[0]),), activation='relu'),
+    tf.keras.layers.Input(shape=(len(train_x[0]),)), 
+    tf.keras.layers.Dense(128, activation='relu'),
     tf.keras.layers.Dropout(0.5),
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dropout(0.5),
@@ -112,12 +111,13 @@ model.save('chatbot_model.keras')
 # ----------------------------------------------------------------------- #
 
 # ----------------------Calculating the accuracy------------------------- #
-cmp_list = accuracy_score(np.argmax(train_y, axis=1), np.argmax(model.predict(train_x), axis=1))
+model_accuracy = model.evaluate(np.array(train_x), np.array(train_y))
 # ----------------------------------------------------------------------- #
 
 # ----------------------Printing the accuracy---------------------------- #
 print('=======================================')
-print('⚠️⚠️⚠️ Accuracy: {:.2f}%'.format(cmp_list * 100) + ' ⚠️⚠️⚠️')
+print('⚠️⚠️⚠️ Model Accuracy: {:.2f}%'.format(model_accuracy[1] * 100) + ' ⚠️⚠️⚠️')
+print('⚠️⚠️⚠️ Model Loss: {:.2f}%'.format(model_accuracy[0] * 100) + ' ⚠️⚠️⚠️')
 print('🚨🚨🚨🚨 Training completed! 🚨🚨🚨🚨')
 print('=======================================')
 # ----------------------------------------------------------------------- #
