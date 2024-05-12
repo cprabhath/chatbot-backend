@@ -101,12 +101,12 @@ optimizer = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.9, nesterov=T
 model.compile(loss='categorical_crossentropy', optimizer=optimizer, metrics=['accuracy'])
 # ----------------------------------------------------------------------- #
 
-# -----------------------Initializing the callbacks---------------------- #
+# -------------------------Initializing the callback--------------------- #
 early_stopping = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=20)
 # ----------------------------------------------------------------------- #
 
 # ----------------------Training the model------------------------------- #
-hist = model.fit(np.array(train_x), np.array(train_y), epochs=500, batch_size=5, verbose=1, callbacks=[early_stopping])
+model.fit(np.array(train_x), np.array(train_y), epochs=500, batch_size=5, verbose=1, callbacks=[early_stopping])
 model.save('chatbot_model.keras')
 # ----------------------------------------------------------------------- #
 
