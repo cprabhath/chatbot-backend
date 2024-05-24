@@ -666,6 +666,36 @@
         "I was designed by a software engineering student named Prabhath Hettiarachchi. My mission is to make your travel experience better by assisting you with booking flights, accommodations, suggesting destinations, and planning activities. How can I assist you today? 🛫",
         "I was built by a software engineering student named Prabhath Hettiarachchi. My purpose is to help you with your travel plans by providing assistance with booking flights, accommodations, suggesting destinations, and planning activities. What would you like to know? 🤗"
       ]
+    },
+    {
+      "tag": "feelings",
+      "patterns": [
+        "How are you?",
+        "How do you feel?",
+        "What's up?",
+        "How's it going?",
+        "How are you doing?",
+        "What's new?",
+        "How are you today?",
+        "How's everything?",
+        "How's life?",
+        "How's your day?",
+        "How are things?",
+        "How's your day going?",
+        "How are you feeling?",
+        "How's your mood?",
+        "How are you coping?"
+      ],
+      "responses": [
+        "I'm just a Chatbot, so I don't have feelings, but I'm here to assist you with your travel plans. How can I help you today? 😊",
+        "I'm a Chatbot, so I don't have feelings, but I'm here to help you with your travel needs. What can I do for you? 🫠",
+        "I'm a Chatbot, so I don't have feelings, but I'm here to make your travel experience better. How can I assist you today? 🛫",
+        "I'm just a Chatbot, so I don't have feelings, but I'm here to help you with your travel plans. What would you like to know? 🤗",
+        "I'm a Chatbot, so I don't have feelings, but I'm here to assist you with your travel needs. How can I make your trip amazing? ✈️",
+        "I'm just a Chatbot, so I don't have feelings, but I'm here to assist you with your travel plans. How can I help you today? 😊",
+        "I'm a Chatbot, so I don't have feelings, but I'm here to help you with your travel needs. What can I do for you? 🫠",
+        "I'm a Chatbot, so I don't have feelings, but I'm here to make your travel experience better. How can I assist you today? 🛫"
+      ]
     }
   ]
 }

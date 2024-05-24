@@ -106,7 +106,7 @@ early_stopping = tf.keras.callbacks.EarlyStopping(monitor='loss', patience=20)
 # ----------------------------------------------------------------------- #
 
 # ----------------------Training the model------------------------------- #
-model.fit(np.array(train_x), np.array(train_y), epochs=500, batch_size=5, verbose=1, callbacks=[early_stopping])
+model.fit(np.array(train_x), np.array(train_y), epochs=500, batch_size=5, verbose=1)
 model.save('chatbot_model.keras')
 # ----------------------------------------------------------------------- #
 
