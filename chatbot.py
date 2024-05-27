@@ -115,6 +115,7 @@ def fill_placeholders(response, context):
 
 # ----------------Getting the response from the chatbot------------------ #
 def get_response(intents_list, intents_json, context):
+    print(intents_list)
     if not intents_list:
         return "I'm not sure how to respond to that. Could you rephrase it or ask something else? 🤔"
     tag = intents_list[0]['intent']
