@@ -1,0 +1,20 @@
+Timestamp: 2024-05-31 12:24:52
+User Name: User
+Conversation: [{"role":"chatbot","message":"Hi! I'm here to assist you with your travel plans. What can I do for you today? 😊","time":"12:24 PM"}]
+Feedback: asd
+
+Timestamp: 2024-05-31 13:18:05
+User Name: User
+Conversation: [{"role":"chatbot","message":"Hi! I'm here to assist you with your travel plans. What can I do for you today? 😊","time":"01:15 PM"},{"role":"user","message":"so, how are you today?","time":"01:16 PM"},{"role":"chatbot","message":"I'm just a Chatbot, so I don't have feelings, but I'm here to assist you with your travel plans. How can I help you today? 😊","time":"01:16 PM"},{"role":"user","message":"ok ok. I know i'm just kidding","time":"01:16 PM"},{"role":"chatbot","message":"No problem! If you need help or have any questions in the future, don't hesitate to reach out. Safe travels! 🌺","time":"01:16 PM"},{"role":"user","message":"wow. you're awesome","time":"01:16 PM"},{"role":"chatbot","message":"I appreciate the positive feedback! If you need assistance in the future, don't hesitate to reach out. Safe travels! 🌍","time":"01:16 PM"}]
+Feedback: wow this chatbot is very good. it's helps me a lot
+
+Timestamp: 2024-06-01 13:32:07
+User Name: User
+Conversation: [{"role":"chatbot","message":"Hi! I'm here to assist you with your travel plans. What can I do for you today? 😊","time":"01:30 PM"},{"role":"user","message":"are you a girl or boy?","time":"01:30 PM"},{"role":"chatbot","message":"I'm a Chatbot designed to assist you with your travel plans. I can help you with booking flights, accommodations, suggesting destinations, and planning activities. What would you like to know? 🤗","time":"01:30 PM"}]
+Feedback: this bot is awesome!
+
+Timestamp: 2024-06-01 13:35:07
+User Name: User
+Conversation: [{"role":"chatbot","message":"Hi! I'm here to assist you with your travel plans. What can I do for you today? 😊","time":"01:30 PM"},{"role":"user","message":"are you a girl or boy?","time":"01:30 PM"},{"role":"chatbot","message":"I'm a Chatbot designed to assist you with your travel plans. I can help you with booking flights, accommodations, suggesting destinations, and planning activities. What would you like to know? 🤗","time":"01:30 PM"}]
+Feedback: rfsdfsdfsfsfsdf
+

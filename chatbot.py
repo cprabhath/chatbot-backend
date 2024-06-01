@@ -1,6 +1,7 @@
 # Description: This file contains the code of access trained AI model and accessed through the flask API.
 
 # -------------Importing the required libraries and modules-------------- #
+import datetime
 from flask import Flask, request, jsonify
 import random
 import json
@@ -29,6 +30,19 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 model = tf.keras.models.load_model('chatbot_model.keras')
 # ----------------------------------------------------------------------- #
 
+# ----------------------Fallback responses for the chatbot--------------- #
+fallback = [
+    "I don't understand that. 🤔", 
+    "I'm not sure I understand. Could you clarify your question? 🤔",
+    "Hmm, I'm having trouble with that one. Can you provide more details? 🤔",
+    "Oops, I didn't catch that. Could you try rephrasing? 🤔",
+    "I'm sorry, I don't have an answer for that. Can you ask something else? 🤔",
+    "That's a tough one for me. Let's try a different question. 🤔",
+    "I'm not sure I understand. Can you ask something else? 🤔",
+    "I'm sorry, I don't have an answer for that. Can you ask something else? 🤔",
+    "I'm Sorry! I don't have enough information to answer that. 😔 Please contact human representative 🙏"
+    ]
+# ----------------------------------------------------------------------- #
 
 # ----------------------Cleaning up the sentence------------------------- #
 def clean_up_sentence(sentence):
@@ -122,12 +136,35 @@ def get_response(intents_list, intents_json, context):
         for i in list_of_intents:
             if i['tag'] == tag:
                 if float(intents_list[0]['probability']) < 0.5:
-                    return "I'm not sure how to respond to that. Could you rephrase it or ask something else? 🤔"
+                    return random.choice(fallback)
                 return fill_placeholders(random.choice(i['responses']), context)
     except IndexError:
-        return "I don't understand that. 🤔"
+        return "There seems to be an issue with the chatbot. Please contact human representative."
 # ----------------------------------------------------------------------- #
 
+# -------------------------- Test code ---------------------------------- #
+@app.route('/', methods=['GET'])
+def index():
+    return "Hello, World!"
+# ----------------------------------------------------------------------- #
+
+# -------------------------- Save feedback ------------------------------ #
+@app.route('/feedback', methods=['POST'])
+def feedback():
+    data = request.get_json()
+    user_name = data.get('user_name', 'Anonymous') 
+    conversation = data.get('conversation', 'No conversation available')
+    feedback = data.get('feedback', 'No feedback provided')
+
+    # Prepare the feedback entry
+    timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    feedback_entry = f"Timestamp: {timestamp}\nUser Name: {user_name}\nConversation: {conversation}\nFeedback: {feedback}\n\n"
+    # Save to file
+    print(feedback_entry)
+    with open('feedback/feedback.txt', 'a', encoding='utf-8') as file:
+        file.write(feedback_entry)
+    return jsonify({"message": "Feedback received successfully! Thank you for your feedback. 🤗"})
+# ----------------------------------------------------------------------- #
 
 # ---------------------API endpoint for getting the response------------- #
 @app.route('/get', methods=['POST'])
