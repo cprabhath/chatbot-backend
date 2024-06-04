@@ -18,3 +18,8 @@ User Name: User
 Conversation: [{"role":"chatbot","message":"Hi! I'm here to assist you with your travel plans. What can I do for you today? 😊","time":"01:30 PM"},{"role":"user","message":"are you a girl or boy?","time":"01:30 PM"},{"role":"chatbot","message":"I'm a Chatbot designed to assist you with your travel plans. I can help you with booking flights, accommodations, suggesting destinations, and planning activities. What would you like to know? 🤗","time":"01:30 PM"}]
 Feedback: rfsdfsdfsfsfsdf
 
+Timestamp: 2024-06-02 11:29:18
+User Name: User
+Conversation: [{"role":"chatbot","message":"Hi! I'm here to assist you with your travel plans. What can I do for you today? 😊","time":"11:16 AM"},{"role":"user","message":"don't talk shit with me","time":"11:19 AM"},{"role":"chatbot","message":"Let's try to keep our conversation friendly. How can I assist you today?","time":"11:19 AM"},{"role":"user","message":"don't talk shit with me","time":"11:19 AM"},{"role":"chatbot","message":"I appreciate frank conversations, but maybe we can keep it a bit cleaner. What else can I do for you?","time":"11:19 AM"},{"role":"user","message":"don't talk shit with me","time":"11:19 AM"},{"role":"chatbot","message":"Let’s keep things professional. What information are you looking for?","time":"11:19 AM"},{"role":"user","message":"don't talk shit with me","time":"11:19 AM"},{"role":"chatbot","message":"Let’s keep things professional. What information are you looking for?","time":"11:19 AM"},{"role":"user","message":"don't talk shit with me","time":"11:20 AM"},{"role":"chatbot","message":"I'm sorry, I can't assist with that kind of language. Let's try to keep things positive!","time":"11:20 AM"}]
+Feedback: This a good chatbot
+
